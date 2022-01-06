@@ -1,0 +1,80 @@
+<html>
+  <head>
+    <title>Log in</title>
+    <!-- Latest compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+      integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu"
+      crossorigin="anonymous"
+    />
+
+    <!-- Optional theme -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css"
+      integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="./full-website.js"></script>
+  </head>
+  <body onload="getAll()">
+    <!-- Get All Cars -->
+    <div>
+      <div id="userInfo">
+        <span>Hello</span> <button onclick="logout()">Logout</button>
+      </div>
+      <table id="tab" class="table table-striped">
+        <thead>
+          <tr>
+            <th>Model</th>
+            <th>Color</th>
+            <th>Weel's Nubmer</th>
+            <th>Edit</th>
+            <th>Delete</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+
+          <button
+            class="btn btn-success"
+            id="add"
+            onclick="addData()"
+          > Add New Car
+          </button>
+      </div>
+      <div id="editModalWrapper">
+        <div class="editModal">
+          <header>Edit</header>
+          <div class="modalContent">
+            <!-- <input type="text" placeholder="jopa" /> -->
+                <input
+                  type="text"
+                  class="form-control"
+                  id="model"
+                  placeholder="Model"
+                />
+                <input
+                  type="text"
+                  class="form-control"
+                  id="color"
+                  placeholder="Color"
+                />
+                <input
+                  type="number"
+                  class="form-control"
+                  id="numOfWheels"
+                  placeholder="Weel's Nubmer"
+                />
+          </div>
+          <footer>
+            <button onclick="enterData()">OK</button>
+            <button onclick="cancel()">Cancel</button>
+          </footer>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
